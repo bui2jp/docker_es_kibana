@@ -1,0 +1,12 @@
+{ 
+    "collapse": {
+        "field": "file_path.keyword"
+      },
+    "query" : { 
+        "term":{
+            "my_num1":{
+                "value" :222223
+            }
+        }
+    }
+}
