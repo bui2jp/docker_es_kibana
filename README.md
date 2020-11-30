@@ -33,7 +33,7 @@ Docker version 19.03.5, build 633a0ea
 % cat test_bluk.json 
 
 % curl -XPOST -H "Content-type: application/json" http://localhost:9200/my_index/mydata/_bulk --data-binary @test_bluk.json
---data-binaryを指定
+（改行コードを含めるために、--data-binaryを指定）
 ```
 
 ## データ検索
@@ -46,6 +46,17 @@ Docker version 19.03.5, build 633a0ea
 ```
 % curl -XGET -H "Content-type: application/json" 'http://localhost:9200/my_index/mydata/_search' -d '
 { 
+    "query" : { 
+        "match_all" : {} 
+    } 
+}'
+```
+
+サイズを指定
+```
+% curl -XGET -H "Content-type: application/json" 'http://localhost:9200/my_index/mydata/_search' -d '
+{ 
+    "size": 100,
     "query" : { 
         "match_all" : {} 
     } 
