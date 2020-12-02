@@ -4,8 +4,8 @@
       },
     "query" : { 
         "term":{
-            "my_num1":{
-                "value" :222223
+            "my_num":{
+                "value" :123
             }
         }
     }
