@@ -63,6 +63,11 @@ Docker version 19.03.5, build 633a0ea
 }'
 ```
 
+### 件数取得
+```
+% curl -XGET -H "Content-type: application/json" 'http://localhost:9200/my_index/mydata/_count'
+```
+
 ### 条件を指定して取得
 ```
 % curl -XGET -H "Content-type: application/json" 'http://localhost:9200/my_index/mydata/_search' -d @test_search_param.json

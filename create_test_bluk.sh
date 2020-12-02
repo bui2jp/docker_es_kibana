@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for i in `seq 1 1000`; do
+for i in `seq 1 10000000`; do
     NOWDT=`date -u +%Y-%m-%dT%H:%M:%S`
     #echo $NOWDT
     #echo "{ \"index\" : {} }\n{ \"file_path\": \"/mydata/003/01/sample${i}.jpeg\", \"post_date\" : $NOWDT, \"message\": \"hoge\", \"my_num\": $i }" >> a.json 
